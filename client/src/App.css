@@ -1,0 +1,43 @@
+.navbar{
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: .1rem solid black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.nav > li{
+    margin-left: 1rem;
+    color: #000000;
+
+}
+
+.nav > .btn{
+    background-color: #848949;
+    transition: .5s ease-in-out;
+
+}
+
+.nav > .btn:hover{
+    background-color: #969c4c;
+    color: #ffffff;
+  }
+
+button{
+    padding: 1rem 2rem;
+    background-color: #848949;
+    border-style: none;
+    border-radius: .4rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+  }
+  
+  button:hover{
+    background-color: #969c4c;
+    color: #ffffff;
+  }
