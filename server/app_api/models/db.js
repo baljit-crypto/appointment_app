@@ -19,3 +19,4 @@ mongoose.connection.on('disconnected', () => {
 })
 
 require('./user');
+require('./inviter');

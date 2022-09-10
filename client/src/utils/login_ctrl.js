@@ -33,7 +33,6 @@ const getAfterSigninPath = () => {
 }
 
 const loggedInAs = (user) => {
-    console.log(user);
     const path = getAfterSigninPath();
     localStorage.setItem(STORAGE_KEY,JSON.stringify({user:user}));
     if(!user){
