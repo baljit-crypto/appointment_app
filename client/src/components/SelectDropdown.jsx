@@ -5,7 +5,7 @@ function SelectDropdown() {
   return (
     <DropdownButton id="dropdown-basic-button" title="Get Appointment">
       <Dropdown.Item href="/GiveMode">Give Appointment</Dropdown.Item>
-      <Dropdown.Item href="/GetMode">Get Appointment</Dropdown.Item>
+      <Dropdown.Item href="/GetPage">Get Appointment</Dropdown.Item>
     </DropdownButton>
   );
 }

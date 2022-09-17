@@ -3,9 +3,9 @@ const inviter = mongoose.model('inviter');
 
 
 
-const createInviter =  function(req,res){
+const createInviter = async function(req,res){
     const {username, businessName, email, phone, timezone, businessImage} = req.body;
-     inviter.create({
+    await inviter.create({
         username: username,
         businessName: businessName,
         email: email,
@@ -29,6 +29,40 @@ const createInviter =  function(req,res){
     })
     };
 
+const getInviters = async (req,res) => {
+    await inviter.find().exec(function(err,data){
+        if(err){
+            res.status(404).json(err);
+            return;
+        }
+        res.status(200)
+        .json(data)
+    })
+}
+
+
+const getInviterById = async (req,res) => {
+    if(!req.params.inviterid){
+        res
+        .status(404)
+        .json({
+         "message":"Not Found, inviter id is required"
+     })
+     return;
+    }
+    await inviter.findById(req.params.inviterid)
+    .exec((err,data) => {
+        if(err){
+            res.status(404).json(err);
+            return;
+        }
+        res.status(200)
+        .json(data)
+      })
+}
+
     module.exports = {
-        createInviter
+        createInviter,
+        getInviters,
+        getInviterById
      };

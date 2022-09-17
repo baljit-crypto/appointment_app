@@ -11,7 +11,7 @@ const headers = () => {
         'Authorization': `Bearer ${token}`
       }
 }
-const get = (url,data) => {
+const get = (url) => {
     return new Promise(function(resolve,reject){
         fetch(url,{
             method: 'GET',
