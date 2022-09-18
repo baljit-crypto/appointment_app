@@ -1,5 +1,6 @@
 var express = require('express')
 var app = express()
+const PORT = process.env.PORT || 5000;
 var cors = require('cors')
 
 
@@ -13,6 +14,6 @@ const inviterRoute = require('./app_api/routes/inviter');
 app.use('/api',userRoute);
 app.use('/api',inviterRoute);
 
-app.listen(process.env.PORT, function(){
-    console.log(`app is listening to ${process.env.PORT}`)
+app.listen(PORT, function(){
+    console.log(`app is listening to ${PORT}`)
 })
